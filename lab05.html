@@ -3,18 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lab 05 Blog Layout</title>
-  <link rel="stylesheet" href="style.css">
+  <title>CSIT 121 - Lab 05 Blog Layout</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color:blue;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr; /* mobile view */
+      gap: 15px;
+    }
+
+    article {
+      background: white;
+      border: 1px solid gray;
+      padding: 10px;
+    }
+
+    /* switch to 3 columns on desktop/tablet */
+    @media (min-width: 768px) {
+      main {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: gray;
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Lab 05</h1> <!-- added heading -->
+  <h1>CSIT 121 - Lab 05</h1>
 
   <header>
-    <h1>My Blog Reflections</h1>
+    <h2>My Blog Reflections</h2>
   </header>
 
-  <!-- NAVIGATION -->
   <nav>
     <ul>
       <li><a href="#lab02">Lab 02</a></li>
@@ -23,32 +74,28 @@
     </ul>
   </nav>
 
-  <!-- blogs -->
   <main>
     <article id="lab02">
-      <h2>Lab 02 Reflection</h2>
-      <p>In Lab 02 I learned the basics of HTML like headings, paragraphs, and lists. It helped me understand how to build a simple web page structure.</p>
+      <h3>Lab 02 Reflection</h3>
+      <p>I learned the basics of HTML like headings, paragraphs, and lists. It showed me how to build a simple webpage structure.</p>
     </article>
 
     <article id="lab03">
-      <h2>Lab 03 Reflection</h2>
-      <p>In Lab 03 I worked with CSS for the first time. I practiced colors, borders, and spacing. It showed me how style can make a page look way better without changing the content to make it more visually appealing.</p>
+      <h3>Lab 03 Reflection</h3>
+      <p>I practiced CSS with colors, borders, and spacing. This made me realize how styles can change the look of a page without changing the content to make it look more visually appealing.</p>
     </article>
 
     <article id="lab05">
-      <h2>Lab 05 Reflection</h2>
-      <p>In Lab 05 I created a responsive layout using CSS grid and media queries. On mobile it’s a single column, but on desktop it switches to three columns side by side.</p>
-      <p>Best design practices include keeping the layout simple, making sure text is easy to read, and designing for both small and large screens. Responsive design matters because people use different devices all the time.</p>
+      <h3>Lab 05 Reflection</h3>
+      <p>I created a responsive layout with CSS grid and media queries. On mobile it shows in one column, and on desktop it switches to three columns.</p>
+      <p>Good design means keeping things simple, easy to read, and making sure it works on all screen sizes.</p>
+      <p>I also learned that spacing with margins and padding makes a page look more organized. This stumped me at first but it was because i didnt read good enough.</p>
     </article>
   </main>
 
   <footer>
-    <p>© 2025 My Blog</p>
+    <p>CSIT 121 Favour Fagbuyi - Fall 2025</p>
   </footer>
 
 </body>
 </html>
-
-
-
-
