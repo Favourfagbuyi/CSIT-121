@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSIT 121 - Lab05</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f2f2f2;
+      margin: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    nav {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      color: blue;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    article {
+      background: white;
+      border: 1px solid gray;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+    footer {
+      text-align: center;
+      color: gray;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CSIT 121 - Lab Reflections</h1>
+    <h2>Favour Fagbuyi</h2>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('lab02')">Lab 02</a>
+    <a href="#" onclick="showPage('lab03')">Lab 03</a>
+    <a href="#" onclick="showPage('lab05')">Lab 05</a>
+  </nav>
+
+  <main>
+    <!-- HOME PAGE -->
+    <div id="home" class="page">
+      <article>
+        <h3>Lab 02 Reflection</h3>
+        <p>I learned the basics of HTML like headings, paragraphs, and lists. It showed me how to build a simple webpage structure.</p>
+      </article>
+
+      <article>
+        <h3>Lab 03 Reflection</h3>
+        <p>I practiced CSS with colors, borders, and spacing. This made me realize how styles can change the look of a page without changing the content to make it look more visually appealing.</p>
+      </article>
+
+      <article>
+        <h3>Lab 05 Reflection</h3>
+        <p>I created a responsive layout with CSS grid and media queries. On mobile it shows in one column, and on desktop it switches to three columns.</p>
+        <p>Good design means keeping things simple, easy to read, and making sure it works on all screen sizes.</p>
+        <p>I also learned that spacing with margins and padding makes a page look more organized. This stumped me at first but it was because I didn’t read carefully enough at first.</p>
+      </article>
+    </div>
+
+    <!-- LAB 02 PAGE -->
+    <div id="lab02" class="page" style="display:none;">
+      <article>
+        <h3>Lab 02 Reflection</h3>
+        <p>I learned the basics of HTML like headings, paragraphs, and lists. It showed me how to build a simple webpage structure.</p>
+      </article>
+    </div>
+
+    <!-- LAB 03 PAGE -->
+    <div id="lab03" class="page" style="display:none;">
+      <article>
+        <h3>Lab 03 Reflection</h3>
+        <p>I practiced CSS with colors, borders, and spacing. This made me realize how styles can change the look of a page without changing the content to make it look more visually appealing.</p>
+      </article>
+    </div>
+
+    <!-- LAB 05 PAGE -->
+    <div id="lab05" class="page" style="display:none;">
+      <article>
+        <h3>Lab 05 Reflection</h3>
+        <p>I created a responsive layout with CSS grid and media queries. On mobile it shows in one column, and on desktop it switches to three columns.</p>
+        <p>Good design means keeping things simple, easy to read, and making sure it works on all screen sizes.</p>
+        <p>I also learned that spacing with margins and padding makes a page look more organized. This stumped me at first but it was because I didn’t read carefully enough at first.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <p>CSIT 121 - Favour Fagbuyi - Fall 2025</p>
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.style.display = 'none');
+      document.getElementById(pageId).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
