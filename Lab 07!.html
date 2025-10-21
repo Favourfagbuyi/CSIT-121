@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candy Tier List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      margin: 0;
+    }
+
+    table {
+      width: 90%;
+      margin: 40px auto;
+      border-collapse: collapse;
+      text-align: center;
+      border: 3px solid black;
+    }
+
+    th, td {
+      border: 2px solid black;
+      padding: 15px;
+      font-size: 18px;
+    }
+
+    th {
+      background-color: #f5f5f5;
+    }
+
+    /* Tier colors */
+    .tier-s { background-color: #66b3ff; }  /* blue */
+    .tier-a { background-color: #66ff66; }  /* green */
+    .tier-b { background-color: #ffff66; }  /* yellow */
+    .tier-c { background-color: #ffb366; }  /* orange */
+    .tier-d { background-color: #ff704d; }  /* red-orange */
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      border: 1px solid black;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: black;
+      color: white;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact section */
+    #contact {
+      display: none;
+      background-color: white;
+      padding: 40px;
+    }
+
+    #contact h2 {
+      color: black;
+    }
+
+    #contact input, 
+    #contact textarea, 
+    #contact select {
+      width: 50%;
+      padding: 10px;
+      margin: 10px;
+      border: 2px solid black;
+      border-radius: 5px;
+    }
+
+    #contact button {
+      padding: 10px 20px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #contact button:hover {
+      background-color: #444;
+    }
+
+    .question {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    #reflection {
+      width: 80%;
+      margin: 40px auto;
+      text-align: left;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    #reflection h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Candy Tier List 🍬 - Lab07</h1>
+
+  <div id="tierlist">
+    <table>
+      <tr>
+        <th>Tier</th>
+        <th>Candy 1</th>
+        <th>Candy 2</th>
+        <th>Candy 3</th>
+        <th>Candy 4</th>
+        <th>Candy 5</th>
+      </tr>
+
+      <tr class="tier-s">
+        <td>S</td>
+        <td>Twix</td>
+        <td>Snickers</td>
+        <td><img src="reesee.png" alt="Reese's Peanut Butter Cups"></td>
+        <td>M&M’s</td>
+        <td>Trollis</td>
+      </tr>
+
+      <tr class="tier-a">
+        <td>A</td>
+        <td>Extremes</td>
+        <td>Sour Patch Kids</td>
+        <td>Butterfinger</td>
+        <td><img src="kitkat.png" alt="Kit Kat bar"></td>
+        <td></td>
+      </tr>
+
+      <tr class="tier-b">
+        <td>B</td>
+        <td>Milky Way</td>
+        <td>Skittles</td>
+        <td>Starburst</td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr class="tier-c">
+        <td>C</td>
+        <td>3 Musketeers</td>
+        <td>Hershey’s</td>
+        <td>Crunch Bar</td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr class="tier-d">
+        <td>D</td>
+        <td>Tootsie Roll</td>
+        <td>Candy Corn</td>
+        <td>Peeps</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <div id="reflection">
+      <h2>Reflection</h2>
+      <p>
+        Creating this candy tier list helped me understand how HTML tables work and how to style them using CSS. 
+        I learned how to add structure with headers, rows, and columns while also using color to make the layout more readable and unique. 
+        This project made me feel more comfortable linking multiple pages together and creating a consistent design across both pages.
+        it was fun to categorize my favorite candies and see how they stack up against each other visually. Overall, this lab was a great exercise in web development basics and design principles.
+        I have had experience with HTML before, but this lab helped solidify my understanding of tables and styling. 10/10 in my book!
+      </p>
+    </div>
+  </div>
+
+  <div id="contact">
+    <h2>Contact Form</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required><br>
+      <input type="email" placeholder="Your Email" required><br>
+      <textarea rows="5" placeholder="Your Message"></textarea><br>
+
+     <div class="question"> <label>1. What is your favorite candy from the list?</label><br> <select> <option>Reese's Cups</option> <option>Snickers</option> <option>Kit Kat</option> <option>Trollis</option> <option>Skittles</option> </select> </div> <div class="question"> <label>2. Do you agree with the S-Tier choices?</label><br> <input type="radio" name="agree" value="Yes"> Yes <input type="radio" name="agree" value="No"> No </div> <div class="question"> <label>3. Which candies would you move up or down?</label><br> <input type="checkbox" value="M&Ms"> M&Ms <input type="checkbox" value="Skittles"> Skittles <input type="checkbox" value="Candy Corn"> Candy Corn <input type="checkbox" value="Kit Kat"> Kit Kat </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <footer>
+    <a href="#" id="goTier">Tier List</a>
+    <a href="#" id="goContact">Contact</a>
+  </footer>
+
+  <script>
+    const tierList = document.getElementById('tierlist');
+    const contact = document.getElementById('contact');
+    const goTier = document.getElementById('goTier');
+    const goContact = document.getElementById('goContact');
+
+    goContact.addEventListener('click', (e) => {
+      e.preventDefault();
+      tierList.style.display = 'none';
+      contact.style.display = 'block';
+      window.scrollTo(0, 0);
+    });
+
+    goTier.addEventListener('click', (e) => {
+      e.preventDefault();
+      contact.style.display = 'none';
+      tierList.style.display = 'block';
+      window.scrollTo(0, 0);
+    });
+  </script>
+
+</body>
+</html>
