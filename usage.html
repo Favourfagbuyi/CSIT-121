@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How is WAI-ARIA Used?</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>How is WAI-ARIA Used?</h1>
+    <nav>
+        <a href="what.html">What is it?</a>
+        <a href="importance.html">Why is it important?</a>
+        <a href="usage.html" class="active">How is it used?</a>
+        <a href="sources.html">Sources</a>
+    </nav>
+</header>
+
+<main>
+    <p>Developers use WAI-ARIA by adding properties, states, and roles to HTML elements.  
+       For example, a custom button made with a <code>div</code> can be given <code>role="button"</code> and an <code>aria-label</code> so screen readers recognize it as a button.  
+       Dropdown menus often use <code>aria-expanded</code> to indicate whether a menu is open or closed. This is crucial for users who cannot see visual cues. 
+       These attributes help users who rely on assistive technologies navigate interactive components easily.  
+       ARIA makes complex websites understandable for all users.</p>
+
+    <p>Another common example is marking live content updates using <code>aria-live</code>.  
+       This lets screen readers announce new messages or alerts in real-time, such as chat notifications or form validation messages.  
+       sliders, tabs, and modal dialogs also use ARIA roles to communicate structure and purpose.  They provide context that might not be clear from HTML alone.
+       Without ARIA, these elements could be invisible or confusing to screen reader users.  
+       Proper usage ensures a smooth and consistent user experience for all users.</p>
+
+    <p>Using ARIA effectively requires understanding the purpose of each attribute.  
+       For instance, <code>aria-hidden="true"</code> can hide decorative content from assistive technologies, preventing unnecessary announcements.  
+       Combining ARIA with semantic HTML creates strong, accessible interfaces.  
+       Practicing with ARIA has helped me see the difference between visually appealing websites and truly inclusive websites.  It has made me more aware of accessibility challenges and solutions.
+       It is all about making sure every user can interact with the page as intended. You want all users to have a seamless experience.</p>
+</main>
+
+<footer>
+    <p>Favour Fagbuyi — WAI-ARIA Lab10</p>
+</footer>
+
+</body>
+</html>
