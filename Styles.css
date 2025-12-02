@@ -1,0 +1,158 @@
+/* styles.css - site-wide styles */
+
+:root{
+  --brand:#0b6d8f;
+  --muted:#6b7280;
+  --bg:#f7fafc;
+  --card:#ffffff;
+  --gap:1rem;
+  --max-width:1000px;
+  --radius:12px;
+  --shadow: 0 6px 18px rgba(11,109,143,0.08);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#111827;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding-bottom:4rem;
+}
+
+/* --- layout container --- */
+.container{
+  max-width:var(--max-width);
+  margin:1.25rem auto;
+  padding:1rem;
+}
+
+/* --- accessible skip link --- */
+.skip-link{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.skip-link:focus{
+  left:1rem;
+  top:1rem;
+  width:auto;
+  height:auto;
+  padding:.5rem .75rem;
+  background:#111;
+  color:#fff;
+  z-index:999;
+}
+
+/* --- header with CSS background image (hero) --- */
+.site-header{
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  margin-bottom:1rem;
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  color:#fff;
+}
+.header-inner{
+  background: linear-gradient(180deg, rgba(11,109,143,0.75), rgba(2,6,23,0.35));
+  padding:1.25rem;
+  display:flex;
+  gap:var(--gap);
+  align-items:center;
+}
+.brand{
+  display:flex;
+  gap:.75rem;
+  align-items:center;
+}
+.brand h1{margin:0;font-size:1.4rem}
+.brand p{margin:0;font-size:.85rem;opacity:.95}
+.nav{
+  margin-left:auto;
+}
+.nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:1rem;
+  font-weight:600;
+  border-bottom:2px solid transparent;
+  padding:0.25rem 0.25rem;
+}
+.nav a:focus, .nav a:hover{border-bottom-color:#ffd; outline:2px solid rgba(255,255,255,0.08);}
+
+/* --- main layout: grid with aside --- */
+.site-grid{
+  display:grid;
+  grid-template-columns: 1fr 300px;
+  gap:1rem;
+}
+
+/* --- cards --- */
+.card{
+  background:var(--card);
+  border-radius:10px;
+  box-shadow: var(--shadow);
+  padding:1rem;
+}
+
+/* --- table styling (used on projects page) --- */
+.table-wrap{overflow:auto;}
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:0.95rem;
+}
+th,td{
+  padding:.6rem .75rem;
+  border:1px solid #e6eef2;
+  text-align:left;
+}
+th{
+  background:#f0f8fb;
+  font-weight:700;
+}
+
+/* --- list styles --- */
+.my-list{padding-left:1.25rem}
+.my-list li{margin:.4rem 0}
+
+/* --- footer --- */
+.site-footer{
+  margin-top:1.25rem;
+  text-align:center;
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+/* --- small utilities --- */
+h2{margin-top:.25rem}
+img.profile{
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  border-radius:10px;
+  display:block;
+  box-shadow:0 6px 14px rgba(0,0,0,0.08);
+}
+
+/* --- responsive: mobile layout rules --- */
+@media (max-width:800px){
+  .site-grid{
+    grid-template-columns: 1fr;
+  }
+  .nav{margin-top:.5rem; display:flex; flex-wrap:wrap; gap:.5rem}
+  .header-inner{flex-direction:column; align-items:flex-start}
+  .brand h1{font-size:1.2rem}
+  .brand p{font-size:.8rem}
+  .container{padding:.5rem}
+}
